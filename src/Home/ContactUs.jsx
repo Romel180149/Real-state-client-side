@@ -1,6 +1,6 @@
 
 
-const PropertiesReviews = () => {
+const ContactUs = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const PropertiesReviews = () => {
     );
 };
 
-export default PropertiesReviews;
+export default ContactUs;
