@@ -1,0 +1,21 @@
+.dash_nav .active{
+    color: black;
+    background-color: #0b2c3d;
+}
+
+.dash_nav li:hover {
+    background-color: #0b2c3d;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+} 
+.dash_nav li:hover a {
+    color: white
+}
+
+
+/* // Navbar Color: #e9f1ff
+// Main color: #0b2c3d
+// Sub color: #b39359 */
