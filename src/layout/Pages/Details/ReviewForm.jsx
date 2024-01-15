@@ -31,7 +31,7 @@ const ReviewForm = ({ propertyDetails }) => {
             hour: '2-digit',
             minute: '2-digit',
         });
-    console.log(clickedTime)
+    // console.log(clickedTime)
 
     const openModal = () => {
         // Additional actions you want to perform

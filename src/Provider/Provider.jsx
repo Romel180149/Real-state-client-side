@@ -73,7 +73,7 @@ const Provider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, createUser => {
             setUser(createUser);
-            console.log('current user', createUser)
+            // console.log('current user', createUser)
             if(createUser){
                 // get token and store client side
                 const userInfo = {email: createUser.email}

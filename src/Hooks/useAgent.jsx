@@ -11,7 +11,7 @@ const useAgent = () => {
         enabled: !!user?.email && !!localStorage.getItem('access-token'),
         queryFn: async() => {
             const res = await axiosSecure.get(`/allUsers/agent/${user?.email}`)
-            console.log(res.data);
+            // console.log(res.data);
             return res.data?.agent;
         }
     })

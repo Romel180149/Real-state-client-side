@@ -17,6 +17,7 @@ const AddProperty = () => {
     const axiosSecure  = useAxiosSecure()
     const onSubmit = async (data) => {
         console.log(data)
+        fetch('property.json')
         // now have to upload the image in imgbb and get an url from the imgbb
         const imageFile = {image: data.Property_img[0]}
         const res = await axiosPublic.post(image_hosting_api, imageFile, {
@@ -24,6 +25,8 @@ const AddProperty = () => {
                 'content-type': 'multipart/form-data'
             }
         });
+        // 
+      
         if(res.data.success) {
             // posting the data to the server with photo url
             const propertyItem = {
