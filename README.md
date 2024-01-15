@@ -1,5 +1,5 @@
 # Bery Real Estate Project
-# live link: https://assignment-12-bery.web.app/
+
 
 ## JP team requirement:
 - I used Material UI in this project as JP team reaquirement

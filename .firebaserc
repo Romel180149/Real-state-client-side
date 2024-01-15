@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "assignment-12-bery"
-  }
+    "default": "real-state-platform-fe7da",
+    "dist": "real-state-platform-fe7da"
+  },
+  "targets": {},
+  "etags": {}
 }
