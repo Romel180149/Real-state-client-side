@@ -69,6 +69,50 @@ const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register></Register>
+      },
+      {
+        path:'/addproperty',
+        element:<AddProperty></AddProperty>
+      },
+      {
+        path:'/myaddedproperties',
+        element:<MyAddedProperties></MyAddedProperties>
+      },
+      {
+        path:'/requestedproperties',
+        element:<RequestedProperties></RequestedProperties>
+      },
+      {
+        path:'/mysoldproperties',
+        element:<MySoldProperties></MySoldProperties>
+      },
+      {
+        path:'/manageproperties',
+        element:<ManageProperties></ManageProperties>
+      },
+      {
+        path:'/adminprofile',
+        element:<UserProfile></UserProfile>
+      },
+      {
+        path:'/manageusers',
+        element:<ManageUsers></ManageUsers>
+      },
+      {
+        path:'/managereview',
+        element:<ManageReviews></ManageReviews>
+      },
+      {
+        path:'/propertybought',
+        element:<Property_bought></Property_bought>
+      },
+      {
+        path:'/soldproperties',
+        element:<MySoldProperties></MySoldProperties>
+      },
+      {
+        path:'/myreview',
+        element:<MyReviews></MyReviews>
       }
     ]
   },
