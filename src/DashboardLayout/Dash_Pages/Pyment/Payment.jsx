@@ -5,8 +5,8 @@ import usePropertyBought from "../../../hooks/usePropertyBought";
 import { useParams } from "react-router-dom";
 
 // TODO: add publishable key
-// const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK)
-const stripePromise = loadStripe('pk_test_51OWu7xHxlmNIl5x9LzH5myO8YbkLaTGIgsIRcMdaKBm3HBfj2QQ1N2xcp3rEJLILPievOd1vEbrSFWuttJlDuIb200V6cq6I7A')
+const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK)
+// const stripePromise = loadStripe('pk_test_51OWu7xHxlmNIl5x9LzH5myO8YbkLaTGIgsIRcMdaKBm3HBfj2QQ1N2xcp3rEJLILPievOd1vEbrSFWuttJlDuIb200V6cq6I7A')
 const Payment = () => {
     const params = useParams()
     const [propertyBought] = usePropertyBought()

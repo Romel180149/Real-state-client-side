@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       {
         path: "all_properties/details/:id",
         element: <PrivateRoutes><Details></Details></PrivateRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/property/${params.id}`)
+        loader: ({ params }) => fetch(`https://real-state-platform-server-side.vercel.app/property/${params.id}`)
       },
       {
         path: 'login',
