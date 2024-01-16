@@ -113,6 +113,11 @@ const router = createBrowserRouter([
       {
         path:'/myreview',
         element:<MyReviews></MyReviews>
+      },
+      {
+        path:'/payment',
+        element:<Payment></Payment>
+
       }
     ]
   },
