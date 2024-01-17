@@ -40,6 +40,7 @@ import Error from './Error/Error.jsx';
 import MySoldProperties from './DashboardLayout/Dash_Pages/AgentDashboard/MySoldProperties/MySoldProperties.jsx';
 import PrivateRoutes from './PrivateRoutes/PrivateRoutes.jsx';
 import AgentRoute from './PrivateRoutes/AgentRoute.jsx';
+import CheckoutForm from './DashboardLayout/Dash_Pages/Pyment/CheckoutForm.jsx';
 
 const queryClient = new QueryClient()
 
@@ -118,7 +119,12 @@ const router = createBrowserRouter([
         path:'/payment',
         element:<Payment></Payment>
 
-      }
+      },
+      {
+      path:'/update',
+      element:<UpdateProperty></UpdateProperty>}
+    
+    
     ]
   },
   {

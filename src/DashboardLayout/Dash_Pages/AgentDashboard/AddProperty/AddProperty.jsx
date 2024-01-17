@@ -4,10 +4,12 @@ import { ProviderContext } from "../../../../Provider/Provider";
 import useAxiosPublic from "../../../../hooks/useAxiosPublic";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY
-// const image_hosting_key = '206379d748d51b2a1554cf470cd5a0d4'
+
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
+
 
 const AddProperty = () => {
     const { user } = useContext(ProviderContext)
@@ -19,12 +21,11 @@ const AddProperty = () => {
         console.log(data)
         fetch('property.json')
         // now have to upload the image in imgbb and get an url from the imgbb
-        const imageFile = {image: data.Property_img[0]}
-        const res = await axiosPublic.post(image_hosting_api, imageFile, {
-            headers: {
-                'content-type': 'multipart/form-data'
-            }
-        });
+        const formData = new FormData()
+        formData.append('image',data.Property_img[0])
+        // const imageFile = {image: data.Property_img[0]}
+        const res = await axios.post(image_hosting_api, formData)
+         
         // 
       
         if(res.data.success) {
@@ -140,7 +141,7 @@ const AddProperty = () => {
                                 <label>Maximum Price $</label>
                                 <input
                                     className="w-full rounded-lg border border-gray-400 p-3 text-sm text-black"
-                                    placeholder="Phone Number"
+                                    placeholder="Number"
                                     type="number"
                                     {...register("Max_price")}
                                 />

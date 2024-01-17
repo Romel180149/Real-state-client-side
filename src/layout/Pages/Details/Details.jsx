@@ -7,9 +7,42 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useWishData from "../../../hooks/useWishData";
 import ReviewForm from "./ReviewForm";
 import DetailsPageReview from "./DetailsPageReview/DetailsPageReview";
+import React, { useState, useEffect } from 'react';
 
 
 const Details = () => {
+    // 
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            // Make a GET request to the JSON endpoint
+            const response = await fetch('property.json');
+            
+            // Check if the request was successful (status code 200)
+            if (response.ok) {
+              // Parse the JSON data from the response
+              const data = await response.json();
+              
+              // Update the state with the fetched data
+              setJsonData(data);
+            } else {
+              // Handle errors if the request was not successful
+              console.error('Failed to fetch data:', response.statusText);
+            }
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        // Call the fetch function
+        fetchData();
+      }, []);
+
+
+
+
+    // 
 
     const { user } = useContext(ProviderContext)
     const axiosSecure = useAxiosSecure()
