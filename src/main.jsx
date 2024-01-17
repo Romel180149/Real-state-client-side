@@ -49,6 +49,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+  
     children: [
       {
         path: '/',
@@ -116,13 +117,16 @@ const router = createBrowserRouter([
         element:<MyReviews></MyReviews>
       },
       {
-        path:'/payment',
+        path:'/payments',
         element:<Payment></Payment>
 
       },
       {
       path:'/update',
-      element:<UpdateProperty></UpdateProperty>}
+      element:<UpdateProperty></UpdateProperty>},
+      {
+
+      }
     
     
     ]
