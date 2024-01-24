@@ -24,6 +24,7 @@ import useWishData from '../../../hooks/useWishData';
 import useAdmin from '../../../hooks/useAdmin';
 import useAgent from '../../../hooks/useAgent';
 import { Grid } from '@mui/material';
+import useProperty from '../../../hooks/useProperty';
 // const pages = ['Home', 'Pricing', 'Blog'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -34,6 +35,7 @@ function Navbar() {
     const [isAdmin, isAdminLoading] = useAdmin();
     const [isAgent, isAgentLoading] = useAgent()
     // console.log( 'wishlist',wishlist)
+    const [property]= useProperty()
 
     // this event handler is to log out users from the server
     const handleLogOut = () => {

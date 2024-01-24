@@ -11,13 +11,15 @@ import React, { useState, useEffect } from 'react';
 
 
 const Details = () => {
-    // 
+    
+    const [data, setData] = useState()
+
 
     useEffect(() => {
         const fetchData = async () => {
           try {
             // Make a GET request to the JSON endpoint
-            const response = await fetch('property.json');
+            const response = await fetch('/property.json');
             
             // Check if the request was successful (status code 200)
             if (response.ok) {
@@ -25,7 +27,7 @@ const Details = () => {
               const data = await response.json();
               
               // Update the state with the fetched data
-              setJsonData(data);
+              setData(data);
             } else {
               // Handle errors if the request was not successful
               console.error('Failed to fetch data:', response.statusText);
@@ -103,9 +105,10 @@ const Details = () => {
         }
         console.log(wishItem)
     }
-
+console.log(data);
     return (
         <div>
+            {/* <div className="hero h-[513px]" style={{ backgroundImage: 'url(https://i.ibb.co/5YrgV3F/bg-1.png)' }}> */}
             <div className="hero h-[513px]" style={{ backgroundImage: 'url(https://i.ibb.co/5YrgV3F/bg-1.png)' }}>
                 <div className="hero-overlay bg-black bg-opacity-70"></div>
                 <div className="hero-content text-center text-white -content">

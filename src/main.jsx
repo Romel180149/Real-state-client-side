@@ -41,6 +41,7 @@ import MySoldProperties from './DashboardLayout/Dash_Pages/AgentDashboard/MySold
 import PrivateRoutes from './PrivateRoutes/PrivateRoutes.jsx';
 import AgentRoute from './PrivateRoutes/AgentRoute.jsx';
 import CheckoutForm from './DashboardLayout/Dash_Pages/Pyment/CheckoutForm.jsx';
+import Advertisement from './layout/Pages/Home/HomeComponents/Adevertisement/Advertisement.jsx';
 
 const queryClient = new QueryClient()
 
@@ -62,7 +63,7 @@ const router = createBrowserRouter([
       {
         path: "all_properties/details/:id",
         element: <PrivateRoutes><Details></Details></PrivateRoutes>,
-        loader: ({ params }) => fetch(`https://real-state-platform-server-side.vercel.app/property/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/property/${params.id}`)
       },
       {
         path: 'login',
@@ -125,7 +126,8 @@ const router = createBrowserRouter([
       path:'/update',
       element:<UpdateProperty></UpdateProperty>},
       {
-
+        path:'/dashboard',
+        element:<DashboardLayout></DashboardLayout>
       }
     
     
@@ -159,6 +161,7 @@ const router = createBrowserRouter([
         path: 'myReviews',
         element: <MyReviews></MyReviews>
       },
+     
 
 
       // Agent routes starts here

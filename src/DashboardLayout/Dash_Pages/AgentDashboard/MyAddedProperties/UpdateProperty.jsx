@@ -145,7 +145,7 @@ const UpdateProperty = () => {
                                 <label>Maximum Price $</label>
                                 <input
                                     className="w-full rounded-lg border border-gray-400 p-3 text-sm text-black"
-                                    placeholder="Phone Number"
+                                    placeholder="Maximum price $"
                                     defaultValue={updateProperty?.Max_price}
                                     type="number"
                                     {...register("Max_price")}
