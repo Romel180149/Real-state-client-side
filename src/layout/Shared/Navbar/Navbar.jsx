@@ -52,6 +52,7 @@ function Navbar() {
         <NavLink className='text-[18px] text-[#0b2c3d]  hover:text-[#b39359] lora-font' to='all_properties'>All Properties</NavLink>
         <NavLink className='text-[18px] text-[#0b2c3d]  hover:text-[#b39359] lora-font' to={`dashboard/${isAdmin && 'admin_profile' || isAgent && 'agent_profile' || 'user_profile'}`}>Dashboard</NavLink>
         <NavLink className='text-[18px] text-[#0b2c3d]  hover:text-[#b39359] lora-font' to='login'>Login</NavLink>
+        <NavLink className='text-[18px] text-[#0b2c3d]  hover:text-[#b39359] lora-font' to='contact'>Contact</NavLink>
      
     </>
 
@@ -66,7 +67,7 @@ function Navbar() {
                     </Box>
 
                     {/* Menu bar */}
-                    <Box className="flex flex-col gap-5 md:flex-row justify-center md:gap-[60px] w-1/3 my-5 md:my-0" >
+                    <Box className="flex flex-col gap-5 md:flex-row justify-center md:gap-[60px] w-2/3 my-5 md:my-0" >
                         {navlinks}
                     </Box>
 

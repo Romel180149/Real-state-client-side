@@ -105,7 +105,8 @@ const Details = () => {
         }
         console.log(wishItem)
     }
-console.log(data);
+// console.log(data);
+
     return (
         <div>
             {/* <div className="hero h-[513px]" style={{ backgroundImage: 'url(https://i.ibb.co/5YrgV3F/bg-1.png)' }}> */}

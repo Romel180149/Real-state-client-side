@@ -3,9 +3,9 @@ import CommonHeading from "../../../../Shared/CommonHeading/CommonHeading";
 import useProperty from "../../../../../hooks/useProperty";
 import { Link } from "react-router-dom";
 
-const Advertisement = () => {
+const Advertisement = ({}) => {
     const [allProperties] = useProperty()
-    const getAdvertisement = allProperties.filter(adProperies => adProperies.advertisement_status === 'advertised')
+    const getAdvertisement =allProperties.filter(adproperies => adproperies.advertisement_status === 'advertised')
     // console.log(getAdvertisement)
     const advertisementProperties = getAdvertisement.slice(0, 4)
     return (

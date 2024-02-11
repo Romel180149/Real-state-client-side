@@ -42,6 +42,7 @@ import PrivateRoutes from './PrivateRoutes/PrivateRoutes.jsx';
 import AgentRoute from './PrivateRoutes/AgentRoute.jsx';
 import CheckoutForm from './DashboardLayout/Dash_Pages/Pyment/CheckoutForm.jsx';
 import Advertisement from './layout/Pages/Home/HomeComponents/Adevertisement/Advertisement.jsx';
+import Contact from './layout/Shared/Navbar/Contact.jsx';
 
 const queryClient = new QueryClient()
 
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path:'contact',
+        element:<PrivateRoutes><Contact></Contact></PrivateRoutes>
       },
       {
         path: "all_properties",
